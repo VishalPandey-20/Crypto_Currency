@@ -1,0 +1,97 @@
+.header {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+
+    h2 {
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 26px;
+        line-height: 1.2;
+        letter-spacing: .5em;
+    }
+
+    h6 {
+        color: darkgray;
+        text-transform: capitalize;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.57;
+        letter-spacing: 0.0087em;
+    }
+
+}
+
+.banner {
+    background: url("../../../assets/download.jpeg");
+    width: 100% !important;
+    background-repeat: round;
+    height: 60vh;
+
+    p {
+        color: #fff;
+    }
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    .image-item {
+        text-align: center;
+
+        img {
+            width: 100px;
+            height: auto;
+            margin: 10px 15px;
+        }
+    }
+
+    h5 {
+        font-weight: 500;
+        color: #fff !important;
+    }
+
+    p {
+        font-weight: 700;
+    }
+}
+
+
+table {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    width: 25%;
+}
+
+
+:host::ng-deep .mat-sort-header-content{
+    color: #fff !important;
+}
+
+:host::ng-deep .mat-paginator-outer-container{
+    background-color: rgb(36,37,37);
+}
+
+
+:host::ng-deep tr.mat-header-row{
+    background-color: #009688;
+}
+
+:host::ng-deep tr.mat-row{
+    height: 70px;
+}

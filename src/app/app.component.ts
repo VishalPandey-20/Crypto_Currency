@@ -14,6 +14,5 @@ export class AppComponent {
 
   sendCurrency(event:any){
     console.log(event,'eeeeeeeeeeeeee');
-    
   }
 }

@@ -7,13 +7,22 @@
                 <h2 class="m-0">Description {{coinData?.description?.en.split('.')[0]}}.</h2>
                 <div class="more-detais">
                     <span class="title">Rank: {{coinData?.market_cap_rank}}</span><br>
-                    <span class="title">Current Price: {{coinData?.market_data?.current_price?.inr | currency:"INR"}}</span><br>
+                    <span class="title">Current Price: {{coinData?.market_data?.current_price?.inr | currency:currency}}</span><br>
                     <span class="title">Market Cap: {{coinData?.market_data?.market_cap?.inr}}</span>
                 </div>
             </div>
         </div>
         <div class="col-md-8">
-            <!-- <canvas style="width: 300px;" baseChart [data]="lineChartData" [options]="lineChartOptions" [type]="lineChartType"></canvas> -->
+            <div style="display: block;">
+                <canvas baseChart
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend"
+                        [chartType]="barChartType"
+                        [plugins]="barChartPlugins">
+                </canvas>
+              </div>
         </div>
     </div>
 </div>

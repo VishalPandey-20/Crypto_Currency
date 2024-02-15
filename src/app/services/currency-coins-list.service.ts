@@ -20,7 +20,7 @@ export class CurrencyCoinsListService {
     );
   }
 
-  getGraphicalCurrencyData(coinId: string, currency: string, days: string): Observable<any>{
+  getGraphicalCurrencyData(coinId: string, currency: string, days: number): Observable<any>{
     return this._http.get<any>(
       `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${currency}&days=${days}`
     );

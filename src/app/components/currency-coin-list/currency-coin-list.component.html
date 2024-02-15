@@ -11,7 +11,7 @@
                         <img [src]="image.image" alt="Image">
                         <h5 class=""><small style="margin-right: 10px;">{{image.symbol | uppercase}}</small><small
                                 class="text-danger">{{image.market_cap_change_percentage_24h}}</small> </h5>
-                        <p class="cart-text">{{image.current_price | currency:"INR"}}</p>
+                        <p class="cart-text">{{image.current_price | currency:currency}}</p>
                     </div>
                 </div>
             </marquee>
@@ -47,7 +47,7 @@
             <!-- Progress Column -->
             <ng-container matColumnDef="current_price">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Currency Price </th>
-                <td mat-cell *matCellDef="let row"> {{row.current_price | currency:"INR"}}</td>
+                <td mat-cell *matCellDef="let row"> {{row.current_price | currency:currency}}</td>
             </ng-container>
 
             <!-- Name Column -->
